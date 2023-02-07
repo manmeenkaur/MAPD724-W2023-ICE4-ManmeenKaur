@@ -7,23 +7,13 @@ class GameViewController: UIViewController {
     @IBOutlet weak var LivesLabel: UILabel!
     @IBOutlet weak var ScoreLabel: UILabel!
     
+    var currentScene: GKScene?
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        if let scene = GKScene(fileNamed: "GameScene")
-        {
-            if let sceneNode = scene.rootNode as! GameScene?
-            {
-                sceneNode.scaleMode = .aspectFill
-                
-                // Present the scene
-                if let view = self.view as! SKView?
-                {
-                    view.presentScene(sceneNode)
-                    view.ignoresSiblingOrder = true
-                }
-            }
-        }
+
+        setScene(sceneName: "EndScene")
         
         // Initialize the Lives and Score
         CollisionManager.gameViewController = self
@@ -50,5 +40,21 @@ class GameViewController: UIViewController {
     func updateScoreLabel()
     {
         ScoreLabel.text = "Score: \(ScoreManager.Score)"
+    }
+    
+    func setScene(sceneName: String) -> Void
+    {
+        currentScene = GKScene(fileNamed: sceneName)
+
+        if let scene = currentScene!.rootNode as! SKScene?
+        {
+            scene.scaleMode = .aspectFill
+
+            if let view = self.view as! SKView?
+            {
+                view.presentScene(scene)
+                view.ignoresSiblingOrder = true
+            }
+        }
     }
 }
