@@ -74,6 +74,8 @@ Mail Pilot</string>
                     <connections>
                         <outlet property="LivesLabel" destination="rAD-mS-Oal" id="oY6-L1-Azc"/>
                         <outlet property="ScoreLabel" destination="GHr-va-X1L" id="JPB-Jb-BoQ"/>
+                        <outlet property="StartButton" destination="lLW-Vj-sth" id="i27-wr-jfE"/>
+                        <outlet property="StartLabel" destination="Ocf-Gm-2t9" id="aBV-vp-z4j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
