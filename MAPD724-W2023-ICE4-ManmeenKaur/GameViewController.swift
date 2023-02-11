@@ -15,8 +15,7 @@ class GameViewController: UIViewController {
     {
         super.viewDidLoad()
 
-        setScene(sceneName: "EndScene")
-//        presentStartScene()
+        presentStartScene()
         
         CollisionManager.gameViewController = self
     }
@@ -70,18 +69,18 @@ class GameViewController: UIViewController {
         setScene(sceneName: "EndScene")
     }
     
-//    @IBAction func StartButton_Pressed(_ sender: UIButton)
-//    {
-//        StartButton.isHidden = true
-//        StartLabel.isHidden = true
-//        ScoreLabel.isHidden = false
-//        LivesLabel.isHidden = false
-//
-//        // Initialize the Lives and Score
-//        ScoreManager.Score = 0
-//        ScoreManager.Lives = 5
-//        updateLivesLabel()
-//        updateScoreLabel()
-//        setScene(sceneName: "GameScene")
-//    }
+    @IBAction func StartButton_Pressed(_ sender: UIButton)
+    {
+        StartButton.isHidden = true
+        StartLabel.isHidden = true
+        ScoreLabel.isHidden = false
+        LivesLabel.isHidden = false
+
+        // Initialize the Lives and Score
+        ScoreManager.Score = 0
+        ScoreManager.Lives = 5
+        updateLivesLabel()
+        updateScoreLabel()
+        setScene(sceneName: "GameScene")
+    }
 }
