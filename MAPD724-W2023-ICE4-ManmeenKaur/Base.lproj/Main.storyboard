@@ -34,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLW-Vj-sth">
-                                <rect key="frame" x="141" y="399" width="149.33333333333337" height="68"/>
+                                <rect key="frame" x="141" y="399" width="162" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="99v-Iv-0X2"/>
                                 </constraints>
@@ -48,13 +48,36 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocf-Gm-2t9">
-                                <rect key="frame" x="25.666666666666657" y="150" width="380" height="200"/>
+                                <rect key="frame" x="25" y="150" width="380" height="200"/>
                                 <string key="text">Play
 Mail Pilot</string>
                                 <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="80"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISP-Tp-0cH">
+                                <rect key="frame" x="25" y="211" width="380" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="OIj-ID-LiH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="64"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywm-AZ-vYS">
+                                <rect key="frame" x="93" y="399" width="244" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="DGb-b1-2Ey"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Restart">
+                                    <fontDescription key="titleFontDescription" name="Dock51" family="Dock 51" pointSize="48"/>
+                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="RestartButton_Pressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="UEW-KA-ERH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -64,18 +87,27 @@ Mail Pilot</string>
                             <constraint firstItem="lLW-Vj-sth" firstAttribute="top" secondItem="Ocf-Gm-2t9" secondAttribute="bottom" constant="49" id="2NU-eK-3im"/>
                             <constraint firstItem="Ocf-Gm-2t9" firstAttribute="top" secondItem="GHr-va-X1L" secondAttribute="bottom" constant="65" id="8gT-9Q-hmb"/>
                             <constraint firstItem="GHr-va-X1L" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rAD-mS-Oal" secondAttribute="trailing" constant="8" symbolic="YES" id="Cvh-ua-4YV"/>
-                            <constraint firstItem="Ocf-Gm-2t9" firstAttribute="centerX" secondItem="lLW-Vj-sth" secondAttribute="centerX" id="DXA-sP-xSx"/>
+                            <constraint firstItem="Ocf-Gm-2t9" firstAttribute="centerX" secondItem="lLW-Vj-sth" secondAttribute="centerX" constant="-7" id="DXA-sP-xSx"/>
                             <constraint firstItem="GHr-va-X1L" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="Dho-iN-5Uc"/>
                             <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="lLW-Vj-sth" secondAttribute="bottom" constant="431" id="Dms-GP-hTm"/>
                             <constraint firstItem="Ocf-Gm-2t9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4qk-I5-YsI" secondAttribute="leading" id="ItW-Ap-VzQ"/>
+                            <constraint firstItem="ywm-AZ-vYS" firstAttribute="baseline" secondItem="lLW-Vj-sth" secondAttribute="baseline" id="Sp0-0U-mb7"/>
+                            <constraint firstItem="ISP-Tp-0cH" firstAttribute="centerX" secondItem="Ocf-Gm-2t9" secondAttribute="centerX" id="bFS-AP-Evl"/>
                             <constraint firstItem="rAD-mS-Oal" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="cqB-Xy-WLw"/>
+                            <constraint firstItem="ISP-Tp-0cH" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="25" id="eTM-I7-1bX"/>
+                            <constraint firstItem="lLW-Vj-sth" firstAttribute="centerX" secondItem="ywm-AZ-vYS" secondAttribute="centerX" constant="7" id="gAL-tI-bor"/>
+                            <constraint firstItem="ywm-AZ-vYS" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="93" id="gWO-vz-l7x"/>
                             <constraint firstItem="rAD-mS-Oal" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="gy5-4x-14R"/>
+                            <constraint firstItem="ISP-Tp-0cH" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="jMH-kg-KCC"/>
                             <constraint firstItem="lLW-Vj-sth" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="141" id="mEw-7n-6bv"/>
                             <constraint firstItem="rAD-mS-Oal" firstAttribute="baseline" secondItem="GHr-va-X1L" secondAttribute="baseline" id="rZ1-JS-10G"/>
+                            <constraint firstItem="lLW-Vj-sth" firstAttribute="top" secondItem="ISP-Tp-0cH" secondAttribute="bottom" constant="80" id="ud3-mC-2MF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="EndLabel" destination="ISP-Tp-0cH" id="IHT-js-k1d"/>
                         <outlet property="LivesLabel" destination="rAD-mS-Oal" id="oY6-L1-Azc"/>
+                        <outlet property="RestartButton" destination="ywm-AZ-vYS" id="ET0-YN-QNj"/>
                         <outlet property="ScoreLabel" destination="GHr-va-X1L" id="JPB-Jb-BoQ"/>
                         <outlet property="StartButton" destination="lLW-Vj-sth" id="i27-wr-jfE"/>
                         <outlet property="StartLabel" destination="Ocf-Gm-2t9" id="aBV-vp-z4j"/>
