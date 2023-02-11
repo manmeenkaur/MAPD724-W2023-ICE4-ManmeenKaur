@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  MAPD724-W2023-ICE4-ManmeenKaur
-//
-//  Created by Manmeen Kaur on 2023-02-06.
-//
-
 import UIKit
 
 @main
